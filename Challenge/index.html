@@ -4,12 +4,22 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    
     <div class="logo">
       <h1>Flatacuties</h1>
     </div>
 
     <div id="character-bar">
       <!-- show characters names here -->
+      <span onclick="displayImage()"> 
+        Mr. Cute
+      </span>
+
+  <span>
+    Mr. Monkey
+  </span>
+
+ 
     </div>
 
     <div class="characterInfo">
@@ -25,6 +35,17 @@
           <input type="text" placeholder="Enter Votes" id="votes" name="votes" />
           <input type="submit" value="Add Votes" />
         </form>
+        <script>
+          function updateVoteCount() {
+            const votes = document.getElementById("votes").value;
+            const voteCount = document.getElementById("vote-count");
+            voteCount.innerHTML = votes;
+          }
+          document.getElementById("votes-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            updateVoteCount();
+          });
+          </script>
         <button id="reset-btn">Reset Votes</button>
       </div>
 
@@ -43,6 +64,7 @@
           <input type="submit" value="Add Character" />
         </form> 
       -->
+      
     </div>
     <script src="src/index.js"></script>
   </body>
