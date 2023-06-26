@@ -9,13 +9,18 @@
       <h1>Flatacuties</h1>
     </div>
 
+<script>
+function displayImage() {
+  const image = document.getElementById("1");
+  image.style.display = "block";}
+  </script>
     <div id="character-bar">
       <!-- show characters names here -->
-      <span onclick="displayImage()"> 
+      <span id="1" onclick="displayImage()" > 
         Mr. Cute
       </span>
 
-  <span>
+  <span id="2" onclick="displayImage()">
     Mr. Monkey
   </span>
 
@@ -27,8 +32,11 @@
         <p id="name">Character's Name</p>
         <img
           id="image"
-          src="assets/dummy.gif"
+          
           alt="Character's Name"
+          onclick="displayImage()"
+          
+            
         /><!-- display character image here -->
         <h4>Total Votes: <span id="vote-count">Character's Votes</span></h4>
         <form id="votes-form">

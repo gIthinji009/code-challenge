@@ -8,6 +8,7 @@ function getCharacters() {
       console.log(characters);
     });
 }
+
 getCharacters();
 const characterBar = document.getElementById("character-bar");
 characters.forEach((character) => {
@@ -68,3 +69,4 @@ votesForm.addEventListener("submit", (event) => {
   `;
   
 });
+
